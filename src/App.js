@@ -47,9 +47,15 @@ export default function App() {
   });
 
   const handleSubmitVal = (val) => {
-    setIdxVal(val);
-    console.log(idxVal);
-    console.log(pokeinfo.name, pokeinfo.height, pokeinfo.abilities);
+    if (val >= 1 && val <= 1017) {
+      setIdxVal(val);
+      console.log(idxVal);
+      console.log(pokeinfo.name, pokeinfo.height, pokeinfo.abilities);
+    }
+    else {
+      setIdxVal(1);
+      alert("please enter index value between 1 to 1017");
+    }
   };
 
   return (
